@@ -12,6 +12,12 @@
 		1F138B881DFECBEF003D109C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F138B861DFECBEF003D109C /* Main.storyboard */; };
 		1F138B8A1DFECBEF003D109C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F138B891DFECBEF003D109C /* Assets.xcassets */; };
 		1F138B8D1DFECBEF003D109C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F138B8B1DFECBEF003D109C /* LaunchScreen.storyboard */; };
+		1F138B951DFECC87003D109C /* FinanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F138B941DFECC87003D109C /* FinanceTableViewCell.swift */; };
+		1F138B971DFECCB3003D109C /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F138B961DFECCB3003D109C /* Stock.swift */; };
+		1F138BB91DFEF990003D109C /* CSVDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F138BB81DFEF990003D109C /* CSVDemo.swift */; };
+		1F23EAFD1E03F41C006F4B17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23EAFC1E03F41C006F4B17 /* LoginViewController.swift */; };
+		1F249BED1E00302E00D22798 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F249BEC1E00302E00D22798 /* GoogleService-Info.plist */; };
+		1FF96EEC9783B8FEED43EA26 /* libPods-pset6-joelfleuren.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A746C42A8819A763D42FBF6F /* libPods-pset6-joelfleuren.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,14 @@
 		1F138B891DFECBEF003D109C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F138B8C1DFECBEF003D109C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F138B8E1DFECBEF003D109C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F138B941DFECC87003D109C /* FinanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceTableViewCell.swift; sourceTree = "<group>"; };
+		1F138B961DFECCB3003D109C /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		1F138BB81DFEF990003D109C /* CSVDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVDemo.swift; sourceTree = "<group>"; };
+		1F23EAFC1E03F41C006F4B17 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F249BEC1E00302E00D22798 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88D8C31B8B3A390CD325D683 /* Pods-pset6-joelfleuren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pset6-joelfleuren.release.xcconfig"; path = "Pods/Target Support Files/Pods-pset6-joelfleuren/Pods-pset6-joelfleuren.release.xcconfig"; sourceTree = "<group>"; };
+		A746C42A8819A763D42FBF6F /* libPods-pset6-joelfleuren.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pset6-joelfleuren.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD3175D81D27087082719CC /* Pods-pset6-joelfleuren.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pset6-joelfleuren.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pset6-joelfleuren/Pods-pset6-joelfleuren.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF96EEC9783B8FEED43EA26 /* libPods-pset6-joelfleuren.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				1F138B811DFECBEF003D109C /* pset6-joelfleuren */,
 				1F138B801DFECBEF003D109C /* Products */,
+				9506156AC4680A4262D941B5 /* Pods */,
+				8588C2788A87C4BF9E7A0FD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +73,34 @@
 			children = (
 				1F138B821DFECBEF003D109C /* AppDelegate.swift */,
 				1F138B841DFECBEF003D109C /* ViewController.swift */,
+				1F23EAFC1E03F41C006F4B17 /* LoginViewController.swift */,
+				1F138B961DFECCB3003D109C /* Stock.swift */,
+				1F138BB81DFEF990003D109C /* CSVDemo.swift */,
 				1F138B861DFECBEF003D109C /* Main.storyboard */,
 				1F138B891DFECBEF003D109C /* Assets.xcassets */,
 				1F138B8B1DFECBEF003D109C /* LaunchScreen.storyboard */,
 				1F138B8E1DFECBEF003D109C /* Info.plist */,
+				1F249BEC1E00302E00D22798 /* GoogleService-Info.plist */,
+				1F138B941DFECC87003D109C /* FinanceTableViewCell.swift */,
 			);
 			path = "pset6-joelfleuren";
+			sourceTree = "<group>";
+		};
+		8588C2788A87C4BF9E7A0FD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A746C42A8819A763D42FBF6F /* libPods-pset6-joelfleuren.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9506156AC4680A4262D941B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFD3175D81D27087082719CC /* Pods-pset6-joelfleuren.debug.xcconfig */,
+				88D8C31B8B3A390CD325D683 /* Pods-pset6-joelfleuren.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F138B911DFECBEF003D109C /* Build configuration list for PBXNativeTarget "pset6-joelfleuren" */;
 			buildPhases = (
+				3586EB6C593DBF25C0D81FFE /* 📦 Check Pods Manifest.lock */,
 				1F138B7B1DFECBEE003D109C /* Sources */,
 				1F138B7C1DFECBEE003D109C /* Frameworks */,
 				1F138B7D1DFECBEE003D109C /* Resources */,
+				292DCC61726D29C09DD8AF07 /* 📦 Embed Pods Frameworks */,
+				44060E1360EBB130F0E9E03B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,18 +168,71 @@
 				1F138B8D1DFECBEF003D109C /* LaunchScreen.storyboard in Resources */,
 				1F138B8A1DFECBEF003D109C /* Assets.xcassets in Resources */,
 				1F138B881DFECBEF003D109C /* Main.storyboard in Resources */,
+				1F249BED1E00302E00D22798 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		292DCC61726D29C09DD8AF07 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pset6-joelfleuren/Pods-pset6-joelfleuren-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3586EB6C593DBF25C0D81FFE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44060E1360EBB130F0E9E03B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pset6-joelfleuren/Pods-pset6-joelfleuren-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F138B7B1DFECBEE003D109C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F23EAFD1E03F41C006F4B17 /* LoginViewController.swift in Sources */,
+				1F138B951DFECC87003D109C /* FinanceTableViewCell.swift in Sources */,
 				1F138B851DFECBEF003D109C /* ViewController.swift in Sources */,
+				1F138B971DFECCB3003D109C /* Stock.swift in Sources */,
 				1F138B831DFECBEF003D109C /* AppDelegate.swift in Sources */,
+				1F138BB91DFEF990003D109C /* CSVDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +353,7 @@
 		};
 		1F138B921DFECBEF003D109C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFD3175D81D27087082719CC /* Pods-pset6-joelfleuren.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "pset6-joelfleuren/Info.plist";
@@ -270,6 +366,7 @@
 		};
 		1F138B931DFECBEF003D109C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88D8C31B8B3A390CD325D683 /* Pods-pset6-joelfleuren.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "pset6-joelfleuren/Info.plist";
@@ -299,6 +396,7 @@
 				1F138B931DFECBEF003D109C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
