@@ -11,6 +11,6 @@ de data komt van een yahoo finance api die in CSVDemo van een csv bestand wordt 
 
 
 The screenshots
-![alt text](doc/1.png)
-![alt text](doc/2.png)
-![alt text](doc/3.png)
+![alt text](docs/1.png)
+![alt text](docs/2.png)
+![alt text](docs/3.png)
