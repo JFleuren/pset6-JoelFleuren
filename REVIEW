@@ -1,0 +1,37 @@
+Names:
+The names appear well described, but has alot of grammer mistakes.
+Sometimes it also uses capitalized strings which are not needed. 
+
+Headers:
+Comments for the headers are	written some times. 
+
+Comments:
+Not all lines are commented, but when is does, it looks wel written.
+Also some lines are not finished written.
+
+Layout:
+There is not alot of constistence in the code layout. 
+It may look like it has been copied-pasted from websites.
+
+Formatting:
+The code is well formatted with line breaks and spaces.
+
+Flow:
+There is an iconstistence flow of code in some code.
+
+Idiom:
+There is not realy an reusable code function avaliable. The functions are copy pasted twice.
+
+Expressions:
+Allmost all of the expressions are simple typed.
+
+Decomposition:
+Most routines are limited in length but mix some tasks.
+
+Modularization:
+Not all code is modularized in large models, but some of them do.
+
+Description:
+The application is 'oke' written. 
+For readablity there is enough to do.
+Also modularity has enough improvements.
