@@ -103,10 +103,10 @@
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xu8-NQ-k5i"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" id="ddH-Rp-V9P"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -134,7 +134,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzF-p6-DZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="-39" y="-545"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dvy-ag-ryY">

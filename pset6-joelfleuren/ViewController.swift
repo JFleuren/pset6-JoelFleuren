@@ -4,6 +4,7 @@
 //
 //  Created by joel fleuren on 12-12-16.
 //  Copyright © 2016 joel fleuren. All rights reserved.
+//  source code for firebase functions https://firebase.google.com/docs/ios/setup
 //
 
 import UIKit
@@ -16,7 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var stocks = [Stock]()
     var demo = CSVDemo()
-    
+    // make a refrence to firebase
     let ref = FIRDatabase.database().reference()
     
     override func viewDidLoad() {
@@ -34,9 +35,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     self.getData(text: dict["symbol"] as! String)
                     
-                    DispatchQueue.main.async {
-                        self.table.reloadData()
-                    }
                 }
                 
             } else {
@@ -47,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         })
     }
-    
+    // get the dat from the api with the entered symbol in the searchbar
     private func getData(text: String) {
         
         let stock = Stock()
@@ -76,13 +74,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             self.stocks.append(stock)
             
-            // reload the table
+//             reload the table
             DispatchQueue.main.async {
                 self.table.reloadData()
             }
         } else {
-            
-            let alertVC = UIAlertController(title: "Error!", message: "Does not exist", preferredStyle: .alert)
+            // alert the user that the symbol does not exist in the api
+            let alertVC = UIAlertController(title: "Error!", message: "The stock does not exist", preferredStyle: .alert)
             alertVC.addAction(UIAlertAction(title: "oke", style: .default, handler: nil))
             present(alertVC, animated: true, completion: nil)
         }
@@ -112,11 +110,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             let stock = self.stocks[index.row]
             
+            // make a dictionary with the symbol price and name of the stock
             var dict = Dictionary<String, Any>()
             dict["symbol"] = stock.Symbol
             dict["price"] = stock.Price
             dict["name"] = stock.Name
-            
+            // set the dictionary in the users firebase database
             self.ref.child("keepTrack\(FIRAuth.auth()!.currentUser!.uid)").child(stock.Symbol).setValue(dict)
             
             tableView.setEditing(false, animated: true)
@@ -128,7 +127,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") {
             (action, index) in
             
-            //
+            // delete the dictionary from the databse
             self.ref.child("keepTrack\(FIRAuth.auth()!.currentUser!.uid)").child(self.stocks[index.row].Symbol).removeValue()
             
             // delete the array
@@ -145,13 +144,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
-    @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
-        
-        UserDefaults.standard.removeObject(forKey: "userUID")
-        dismiss(animated: true, completion: nil)
-    }
     
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        
+        do {
+            // log out and go to the login viewcontroller
+            try FIRAuth.auth()!.signOut()
+            dismiss(animated: true, completion: nil)
+        } catch{
+            print("Error while signing out")
+        }
+        
+        
+    
+    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // the text filled in by the user
         let searchbarText = searchBar.text!

@@ -4,6 +4,7 @@
 //
 //  Created by joel fleuren on 16-12-16.
 //  Copyright © 2016 joel fleuren. All rights reserved.
+//  source code for firebase functions https://firebase.google.com/docs/auth/ios/password-auth
 //
 
 import UIKit
@@ -16,16 +17,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // log in
         if UserDefaults.standard.value(forKey: "userUID") != nil {
             performSegue(withIdentifier: "LoggedInSegue", sender: nil)
         }
         
-        performSegue(withIdentifier: "LoggedInSegue", sender: nil)
     }
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
-        
+        // check if there is something filled in and check if the user already exist
         if (emailTextField.text?.characters.count)! > 0 && (passwordTextField.text?.characters.count)! > 0 {
             FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
                 
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
                 }
                 
                 UserDefaults.standard.set(user!.uid, forKey: "userUID")
-                
+                // go to the next screen
                 self.performSegue(withIdentifier: "LoggedInSegue", sender: nil)
                 
             })
@@ -44,9 +44,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signupButtonClicked(_ sender: UIButton) {
-        
+        // check if there is someting filled
         if (emailTextField.text?.characters.count)! > 0 && (passwordTextField.text?.characters.count)! > 0 {
-                        
+            // create a new user in the database
             FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
                 
                 // error
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
                 }
                 
                 UserDefaults.standard.set(user!.uid, forKey: "userUID")
-                
+                // go to the next screen
                 self.performSegue(withIdentifier: "LoggedInSegue", sender: nil)
             })
         }
